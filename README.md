@@ -1,1 +1,1 @@
-# my-charity-event
+# charity-event

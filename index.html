@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <title>Simple Grid Layout</title>
+  <link href="main.css" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://fonts.googleapis.com/css?family=Bungee+Shade" rel="stylesheet">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+</head>
+
+<body>
+
+  <div class="container">
+
+<header>
+      <h1>RMHC 5K-10K Marathon</h1>
+
+  </header>
+
+  <div class="w3-content w3-display-container">
+    <img class="mySlides" src="img/run.jpg" alt="Color Run image">
+    <img class="mySlides" src="img/run-2.jpg" alt="happy runners">
+    <img class="mySlides" src="img/run-quote.jpg" alt="running quote">
+    <img class="mySlides" src="img/color-run.jpg" alt="2nd color run ima">
+
+    <button class="w3-button w3-clear w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+    <button class="w3-button w3-clear w3-display-right" onclick="plusDivs(1)">&#10095;</button>
+  </div>
+
+  <script>
+  var slideIndex = 1;
+  showDivs(slideIndex);
+
+  function plusDivs(n) {
+    showDivs(slideIndex += n);
+  }
+
+  function showDivs(n) {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    if (n > x.length) {slideIndex = 1}
+    if (n < 1) {slideIndex = x.length}
+    for (i = 0; i < x.length; i++) {
+       x[i].style.display = "none";
+    }
+    x[slideIndex-1].style.display = "block";
+  }
+  </script>
+
+    <section id="about">
+<h2>About the Charity</h2>
+      <p>The charity I chose was the <a href="https://www.rmhc.org/Ronald"> Mcdonald House Charity(RMHC)</a>. This charity provides simple houses so families can focus on the health of their children. These houses provide hot meals, shelter during the night, playrooms for children, privacy, and anything else a normal house would have. For their <a href="https://www.rmhc.org/mission-and-vision">mission and vison</a>,They put the sick children first and help the famiies that need it the most. It’s important for more people to know about this charity and for more people to support it. Sick children should get the best treatment they can. Families of those children should be close by and that's why RMHC does whats it does.</p>
+      <img src="img/rmhc.jpg" alt="rmhc logo">
+
+    </section>
+
+    <section id="event">
+<h2> About the Event</h2>
+      <p>The event I’m doing is a marathon or 5k/10k race  to support the RMHC. By participating, you could raise money to fund the Ronald Mcdonald House Charity and to help families that need to stay close to each other. This is a way to help and show your support of the families that need it. It doesn’t matter if you not a runner, wants counts is your support for the the families in need of the houses. It will be on the weekend of May 25-27, 2018. It will located in Downtown Greenville. Make sure you will be there by 8:30am and it will end by noon or 12:00. Join us and you can get:</p>
+
+<ul>
+  <li>A free entry into the 2019 race</li>
+  <li>An official RMHC team shirt</li>
+  <li>Customized Donation Page  to give family and friends an easy way to donate and show their support for you.</li>
+  <li>Exceptional race weekend experience</li>
+  <li>access to our Team RMHC Hospitality Tent which includes private gear check, restrooms, and  pre- and post-race snacks/meals</li>
+</ul>
+</section>
+
+
+<section id="signup">
+    <h1>Order Your T-Shirt NOW!</h1>
+
+        <form action="thanks.html" method="post">
+        <fieldset>
+        <legend>Personal Info</legend>
+
+        <label for="name">Name:</label>
+        <input id="name" type="text" name="name">
+       <br>
+
+
+        <label for="address">Address:</label>
+        <input id="address" type="text" name="address">
+        <br>
+
+       <label for="city">City:</label>
+       <input id="city" type="text" name="city">
+
+      <label for="state">State:</label>
+      <input id="state" type="text" name="State" size="2" maxlength="2">
+
+        <label for="zip">Zip:</label>
+        <input id="zip" type="text" name="Zip">
+
+      </fieldset>
+
+    <fieldset>
+        <legend>Order Info For Shirt</legend>
+        <label for="size">Size:</label>
+        <select id="size" name="sizes">
+          <option value="x-sm">Extra Small</option>
+          <option value="sm">Small</option>
+          <option value="md">Medium</option>
+          <option value="lg">Large</option>
+          <option value="x-lg">Extra Large</option>
+        </select>
+<
+        <input for="quantity">Quantity:</label>
+        <input id="quantity" type="text" name="quantity" size="5">
+        <br>
+
+      </fieldset>
+
+      <fieldset>
+        <legend>Payment Info</legend>
+
+        Card Type:
+        <input id="visa" type="radio" name="card_type" value="visa">
+        <label for="visa">Visa</label>
+
+        <input id="mc" type="radio" name="card_type" value="mc">
+        <label for="mc">Master Card</label>
+
+        <input id="discover" type="radio" name="card_type" value="discover">
+        <label for="discover">Discover</label>
+        <br>
+
+      <label for="cc_number">Credit Card Number:</label>
+      <input id="cc_number" type="type" name"cc_number" size="5">
+      <br>
+
+      </label>
+
+      </fieldset>
+
+      <input type="submit" value="Submit Form">
+
+      </form>
+    </section>
+
+    <footer>
+      This is the footer area
+    </footer>
+
+  </div>
+
+</body>
+</html>
