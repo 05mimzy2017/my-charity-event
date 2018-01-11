@@ -11,7 +11,6 @@ div.container {
   grid-template-columns: 1fr;
   grid-template-areas:
     "header"
-    "run"
     "about"
     "event"
     "signup"
@@ -22,28 +21,47 @@ div.container {
   max-width: 800px;
 }
 
-header {
-  grid-area: header;
+h1 {
+  grid-area: signup;
   text-align: center;
-  font-size: 22px;
-  font-family: 'Bungee Shade', cursive;
+  font-size: 16px;
+  font-family: 'Bungee Outline', cursive;
   color: #ffffff;
 }
 
 
 img {
   max-width: 100%;
+  max-height: 100%;
   text-align: center;
 }
 
+
+h2{
+   font-family: 'Bungee Shade', cursive;
+   text-align: center;
+   font-size: 32px;
+}
 
 main {
 }
 
 p{
-  line-height: 1.5;
+  font-size: 18px;
+  line-height: 2.0;
+  color: #ffffff;
+  font-family: 'Acme', sans-serif;
+  margin-left: 32px;
+  margin-right: 32px;
 }
 
+ul{
+  font-size: 18px;
+  line-height: 2.0;
+  color: #ffffff;
+  font-family: 'Acme', sans-serif;
+  margin-left: 32px;
+  margin-right: 32px;
 }
 
 section {
@@ -82,22 +100,49 @@ section#event {
   color: #ffffff;
 }
 
-section#run {
-  grid-area: run;
-  color: #ffffff;
-  background-image:url("img/background-image.jpg")
-}
-
 section#signup {
   background-image:url("img/background-image.jpg")
   grid-area: signup;
-    color: #ffffff;
+  color: #ffffff;
+}
+
+input[type=button], input[type=submit], input[type=reset] {
+    background-color: #3CBC8D;
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-decoration: none;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+fieldset {
+    border: 2px solid #3CBC8D;
+    border-radius: 4px;
+    margin-left: 32px;
+    margin-right: 32px;
+}
+
+legend {
+    font-family: 'Acme', sans-serif;
+    line-height: 2.0;
+    color: #3cbc8d;
+    font-size: 18px;
+}
+
+label {
+  font-family: 'Acme', sans-serif;
+  line-height: 2.0;
+  color: #ffffff;
+  font-size: 18px;
 }
 
 footer {
   background-image: url("img/background-image.jpg")
   grid-area: footer;
-    color: #ffffff;
+  color: #ffffff;
+  font-size: 32px;
+  font-family: 'Bungee Shade', cursive;
 }
 
 @media (min-width: 800px) {
@@ -105,7 +150,6 @@ footer {
     grid-template-columns: 1fr 1fr;
     grid-template-areas:
       "header header"
-      "run run"
       "event event"
       "about signup"
       "footer footer";

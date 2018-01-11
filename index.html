@@ -3,29 +3,29 @@
 <html>
 <head>
   <title>Simple Grid Layout</title>
-  <link href="main.css" rel="stylesheet">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link href="https://fonts.googleapis.com/css?family=Bungee+Shade" rel="stylesheet">
-  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link href="https://fonts.googleapis.com/css?family=Acme|Bungee+Outline|Bungee+Shade" rel="stylesheet">
+  <link href="main.css" rel="stylesheet">
 </head>
 
 <body>
+  <header>
+        <h1 class="w3-center">RMHC 5K-10K Marathon</h1>
+    </header>
 
   <div class="container">
 
-<header>
-      <h1>RMHC 5K-10K Marathon</h1>
+  <div class="w3-content w3-display-container" style="max-width: 800px">
+    <img class="mySlides" src="img/run.jpg" alt="Color Run image" style="width: 100%">
+    <img class="mySlides" src="img/run-2.jpg" alt="happy runners" style="width: 100%">
+    <img class="mySlides" src="img/run-quote.jpg" alt="running quote" style="width: 100%">
+    <img class="mySlides" src="img/color-run.jpg" alt="2nd color run image" style="width: 100%">
+  </div>
 
-  </header>
-
-  <div class="w3-content w3-display-container">
-    <img class="mySlides" src="img/run.jpg" alt="Color Run image">
-    <img class="mySlides" src="img/run-2.jpg" alt="happy runners">
-    <img class="mySlides" src="img/run-quote.jpg" alt="running quote">
-    <img class="mySlides" src="img/color-run.jpg" alt="2nd color run ima">
-
-    <button class="w3-button w3-clear w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
-    <button class="w3-button w3-clear w3-display-right" onclick="plusDivs(1)">&#10095;</button>
+  <div class="w3-center">
+  <div class="w3-section">
+    <button class="w3-button w3-light-grey" onclick="plusDivs(-1)">❮ Prev</button>
+    <button class="w3-button w3-light-grey" onclick="plusDivs(1)">Next ❯</button>
   </div>
 
   <script>
@@ -36,27 +36,40 @@
     showDivs(slideIndex += n);
   }
 
+  function currentDiv(n) {
+    showDivs(slideIndex = n);
+  }
+
   function showDivs(n) {
     var i;
     var x = document.getElementsByClassName("mySlides");
+    var dots = document.getElementsByClassName("demo");
     if (n > x.length) {slideIndex = 1}
     if (n < 1) {slideIndex = x.length}
     for (i = 0; i < x.length; i++) {
        x[i].style.display = "none";
     }
+    for (i = 0; i < dots.length; i++) {
+       dots[i].className = dots[i].className.replace(" w3-red", "");
+    }
     x[slideIndex-1].style.display = "block";
+    dots[slideIndex-1].className += " w3-red";
   }
   </script>
 
+<style>
+.mySlides {display:none}
+</style>
+
     <section id="about">
-<h2>About the Charity</h2>
-      <p>The charity I chose was the <a href="https://www.rmhc.org/Ronald"> Mcdonald House Charity(RMHC)</a>. This charity provides simple houses so families can focus on the health of their children. These houses provide hot meals, shelter during the night, playrooms for children, privacy, and anything else a normal house would have. For their <a href="https://www.rmhc.org/mission-and-vision">mission and vison</a>,They put the sick children first and help the famiies that need it the most. It’s important for more people to know about this charity and for more people to support it. Sick children should get the best treatment they can. Families of those children should be close by and that's why RMHC does whats it does.</p>
-      <img src="img/rmhc.jpg" alt="rmhc logo">
+<h2 class="w3-center">About the Charity</h2>
+      <p>The charity I chose was the <a href="https://www.rmhc.org/Ronald"> Mcdonald House Charity(RMHC)</a>. This charity provides simple houses so families can focus on the health of their children. These houses provide hot meals, shelter during the night, playrooms for children, privacy, and anything else a normal house would have. For their <a href="https://www.rmhc.org/mission-and-vision">mission and vison</a>,They put the sick children first and help the famiies that need it the most. It’s important for more people to know about this charity and for more people to support it. Sick children should get the best treatment they can. Families of those children should be close by and that's why RMHC does whats it does. Please <a href="http://support.rmhc.org/site/PageNavigator/pw/Donation_Landing.html">Donate</a>today!. </p>
+      <img src="img/rmhc-logo.jpg" alt="rmhc logo">
 
     </section>
 
     <section id="event">
-<h2> About the Event</h2>
+<h2 class="w3-center">About the Event</h2>
       <p>The event I’m doing is a marathon or 5k/10k race  to support the RMHC. By participating, you could raise money to fund the Ronald Mcdonald House Charity and to help families that need to stay close to each other. This is a way to help and show your support of the families that need it. It doesn’t matter if you not a runner, wants counts is your support for the the families in need of the houses. It will be on the weekend of May 25-27, 2018. It will located in Downtown Greenville. Make sure you will be there by 8:30am and it will end by noon or 12:00. Join us and you can get:</p>
 
 <ul>
@@ -70,8 +83,7 @@
 
 
 <section id="signup">
-    <h1>Order Your T-Shirt NOW!</h1>
-
+<h1 class="w3-center">Order Your T-Shirt NOW!</h1>
         <form action="thanks.html" method="post">
         <fieldset>
         <legend>Personal Info</legend>
@@ -106,7 +118,7 @@
           <option value="lg">Large</option>
           <option value="x-lg">Extra Large</option>
         </select>
-<
+
         <input for="quantity">Quantity:</label>
         <input id="quantity" type="text" name="quantity" size="5">
         <br>
@@ -141,7 +153,7 @@
     </section>
 
     <footer>
-      This is the footer area
+      By: Jackie B.
     </footer>
 
   </div>
